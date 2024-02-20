@@ -52,7 +52,7 @@ router.delete("/:id", verify, async (req,res)=>{
         }
     }
     else{
-        res.status(403).json("You are not authorized to add movies!");
+        res.status(403).json("You are not authorized to delete movies!");
     }
 });
 
@@ -105,7 +105,7 @@ router.get("/", verify, async (req,res)=>{
         }
     }
     else{
-        res.status(403).json("You are not authorized to add movies!");
+        res.status(403).json("You are not authorized!");
     }
 });
 
