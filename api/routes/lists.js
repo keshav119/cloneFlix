@@ -1,30 +1,48 @@
 const router = require("express").Router();
-const Movie = require("../models/movie");
+const List = require("../models/list");
 const verify = require("../verifyToken");
 
 //CREATE
 
 router.post("/", verify, async (req,res)=>{
     if (req.user.isAdmin) {
-        const newMovie = new Movie(req.body);
+        const newList = new List(req.body);
 
         try{
-            const savedMovie = await newMovie.save();
-            res.status(200).json(savedMovie);
+            const savedList = await newList.save();
+            res.status(200).json(savedList);
         }catch(err){
             res.status(500).json(err);
         }
     }
     else{
-        res.status(403).json("You are not authorized to add movies!");
+        res.status(403).json("You are not authorized to add Lists!");
     }
 });
 
-//DELETE
-
 //GET
 
+// router.get("/get", verify, async (req,res) =>{
+//     const typeQuery = req.query.type;
+//     const genreQuery = req.query.genre;
+//     let list = [];
 
+//     try{
+//         if(type){
+//             if(genreQuery){
+//                 list = await List.aggregate([
+//                     { $sample: { $size: 10 }},
+//                     { $match: { type: typeQuery, genre: genreQuery } },
+//                 ]);
+//             }
+//         }
+//         else{
+//             list = await List.aggregate([{ $sample: { $size: 10 } }]);
+//         }
+//     }catch(err){
+//         res.status(500).json(err);
+//     }
+// })
 
 
 module.exports = router;
