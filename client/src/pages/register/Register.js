@@ -22,9 +22,14 @@ export default function Register() {
     setPassword(passwordRef.current.value);
     setUsername(usernameRef.current.value);
     try {
+      
       await axios.post("http://localhost:3000/api/auth/register", { email, username, password });
-      navigate.push("/login");
+      navigate("/login");
     } catch (err) {}
+  };
+  const goToLogin = () => {
+    // Use navigate to go to the login page
+    navigate("/login");
   };
   return (
     <div className="register">
@@ -35,7 +40,9 @@ export default function Register() {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
             alt=""
           />
-          <button className="loginButton">Sign In</button>
+          <button className="loginButton" onClick={goToLogin}>
+            Sign In
+          </button>
         </div>
       </div>
       <div className="container">
