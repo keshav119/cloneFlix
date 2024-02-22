@@ -27,10 +27,10 @@ export default function Register() {
       navigate("/login");
     } catch (err) {}
   };
-  const goToLogin = () => {
-    // Use navigate to go to the login page
-    navigate("/login");
-  };
+  // const goToLogin = () => {
+  //   // Use navigate to go to the login page
+  //   navigate("/login");
+  // };
   return (
     <div className="register">
       <div className="top">
@@ -40,7 +40,7 @@ export default function Register() {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
             alt=""
           />
-          <button className="loginButton" onClick={goToLogin}>
+          <button className="loginButton" onClick={navigate("/login")}>
             Sign In
           </button>
         </div>

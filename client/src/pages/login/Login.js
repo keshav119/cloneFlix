@@ -28,7 +28,7 @@ export default function Login() {
           <h1>Sign In</h1>
           <input
             type="email"
-            placeholder="Email or phone number"
+            placeholder="Email Address"
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
