@@ -66,15 +66,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 1000;
         font-size: 18px;
         font-weight: 500;
         margin-right: 10px;
         cursor: pointer;
 
         &.play {
-          background-color: white;
-          color: var(--main-color);
+          background-color: gray;
+          color: white;
         }
 
         &.more {

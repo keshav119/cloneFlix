@@ -12,7 +12,6 @@ import { Link } from "react-router-dom";
 export default function ListItem({ index, item }) {
   const [isHovered, setIsHovered] = useState(false);
   const [movie, setMovie] = useState({});
-
   useEffect(() => {
     const getMovie = async () => {
       try {
@@ -22,6 +21,7 @@ export default function ListItem({ index, item }) {
             "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken,
           },
         });
+        
         setMovie(res.data);
       } catch (err) {
         console.log(err);
@@ -29,9 +29,9 @@ export default function ListItem({ index, item }) {
     };
     getMovie();
   }, [item]);
-
+  const video = movie.video
   return (
-    <Link to={{ pathname: "/watch", movie: movie }}>
+    <Link to = {`/watch/?video=${video}`} >
       <div
         className="listItem"
         style={{ left: isHovered && index * 225 - 50 + index * 2.5 }}
