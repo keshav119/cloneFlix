@@ -18,7 +18,10 @@ export default function Watch() {
           Home
         </div>
       </Link>
-      <ReactPlayer width="100%" height="100%" url={video} />
+      <ReactPlayer  width="100%" height="100%" url={video} 
+        controls = 'true'
+        playing = 'true'
+      />
       {console.log(video)}
       {/* <video className="video" autoPlay progress controls src={video} /> */}
     </div>
