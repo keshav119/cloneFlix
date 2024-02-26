@@ -39,7 +39,7 @@ The tech-stack used:
   - Repository for CI/CD - Github
   - Hosting Platform - Vercel.com
 
--Database:
+- Database:
   - MongoDB(with mongoose)
 
 ## Setup
