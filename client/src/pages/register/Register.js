@@ -23,7 +23,7 @@ export default function Register() {
     setUsername(usernameRef.current.value);
     try {
       
-      await axios.post("https://cloneflix.onrender.com/api/auth/register", { email, username, password });
+      await axios.post("https://clone-flix-backend.vercel.app/api/auth/register", { email, username, password });
       navigate("/login");
     } catch (err) {}
   };

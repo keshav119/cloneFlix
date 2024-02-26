@@ -16,7 +16,7 @@ export default function ListItem({ index, item }) {
   useEffect(() => {
     const getMovie = async () => {
       try {
-        const res = await axios.get("https://cloneflix.onrender.com/api/movies/find/" + item, {
+        const res = await axios.get("https://clone-flix-backend.vercel.app/api/movies/find/" + item, {
           headers: {
             token:
             "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken,

@@ -9,7 +9,7 @@ export default function Featured({ type, setGenre }) {
   useEffect(() => {
     const getRandomContent = async () => {
       try {
-        const res = await axios.get(`https://cloneflix.onrender.com/api/movies/random?type=${type}`, {
+        const res = await axios.get(`https://clone-flix-backend.vercel.app/api/movies/random?type=${type}`, {
           headers: {
             token:
               "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken,
