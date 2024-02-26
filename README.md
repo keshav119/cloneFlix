@@ -5,7 +5,7 @@ This project is a Netflix clone that replicates the core functionality and desig
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
-- [Technologies Used](#technologies-used)
+- [Tech-Stack](#tech-stack)
 - [Setup](#setup)
 - [Deploy](#deploy)
 - [Final-Notes](#final-notes)
@@ -25,9 +25,9 @@ The key features include:
 - Video Streaming/Preview
 - Good looking and functional UI
 
-## Technologies Used
+## Tech-Stack
 
-The techstack used:
+The tech-stack used:
 
 - Frontend:
   - React js
@@ -38,6 +38,9 @@ The techstack used:
 - Deployment:
   - Repository for CI/CD - Github
   - Hosting Platform - Vercel.com
+
+-Database:
+  - MongoDB(with mongoose)
 
 ## Setup
 
