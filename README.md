@@ -57,7 +57,6 @@ cd api
 npm install
 
 # Configure environment variables (MONGO_URI && SECRET_KEY)
-cp .env.example .env
 # Update the .env file with your configuration
 
 # Start the development server
